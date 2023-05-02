@@ -22,16 +22,16 @@ const Header = () => {
           {user ? (
             <div
               data-tip={user?.email}
-              className="dropdown tooltip tooltip-bottom tooltip-warning "
+              className="dropdown tooltip tooltip-left tooltip-warning "
             >
               {" "}
-              <Link className="  btn btn-circle btn-outline ml-3">
+              <button className="  btn btn-circle btn-outline ml-3">
                 <img
                   className="rounded-full"
                   src={user?.photoURL}
                   alt="displayPhoto"
                 />
-              </Link>
+              </button>
               <ul
                 tabIndex={0}
                 className="dropdown-content  menu p-2 shadow bg-black bg-opacity-70 rounded-box w-fit"
