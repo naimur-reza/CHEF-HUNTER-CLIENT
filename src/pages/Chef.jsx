@@ -12,7 +12,9 @@ const Chef = () => {
   console.log(chefs);
   return (
     <div className="py-10 my-container gap-4">
-      <h1 className="text-3xl font-semibold text-center">Meet Our Chef</h1>
+      <h1 className="text-4xl text-gray-100 font-semibold text-center">
+        Meet Our Chef
+      </h1>
       <div className="grid grid-cols-3 gap-5 pt-10">
         {chefs.map((chef) => {
           return (
@@ -21,23 +23,23 @@ const Chef = () => {
                 <img className="w-full h-full" src={chef.image} />
               </figure>
               <div className="card-body">
-                <h2 className="card-title">{chef?.name}</h2>
-                <p className="inline-flex items-center gap-2">
-                  <span className="font-semibold text-gray-700 inline-flex items-center gap-1">
-                    <FaHistory /> Experience
+                <h2 className="card-title text-gray-100">{chef?.name}</h2>
+                <p className="inline-flex items-center gap-2 text-gray-100">
+                  <span className="font-semibold text-gray-100 inline-flex items-center gap-1">
+                    <FaHistory className="text-green-500" /> Experience
                   </span>
                   : {chef?.experience} year
                 </p>
-                <p className="inline-flex items-center gap-2">
+                <p className="inline-flex items-center gap-2 text-gray-100">
                   {" "}
-                  <span className="font-semibold text-gray-700 inline-flex items-center gap-1">
-                    <FaPizzaSlice /> Recipes:
+                  <span className="font-semibold  text-gray-100 inline-flex items-center gap-1">
+                    <FaPizzaSlice className="text-orange-500" /> Recipes:
                   </span>{" "}
                   {chef?.recipes}
                 </p>
-                <p className="inline-flex gap-2 items-center">
-                  <span className="font-semibold text-gray-700 inline-flex items-center gap-2">
-                    <FaThumbsUp /> Likes:
+                <p className="inline-flex gap-2 items-center text-gray-100">
+                  <span className="font-semibold text-gray-100 inline-flex items-center gap-2">
+                    <FaThumbsUp className="text-sky-500" /> Likes:
                   </span>
                   {chef?.likes}
                 </p>

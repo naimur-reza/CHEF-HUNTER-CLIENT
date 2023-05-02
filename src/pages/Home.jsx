@@ -5,8 +5,8 @@ import pizza from "../assets/images/pizza.png";
 import Chef from "./Chef";
 const Home = () => {
   return (
-    <div>
-      <div>
+    <div className="">
+      <div className="py-20">
         <h1 className="text-5xl text-gray-200 font-semibold font-mono text-center py-5">
           Welcome To CooksDen
         </h1>
@@ -15,14 +15,14 @@ const Home = () => {
           for. Set the table for a successful online venture with ease!
         </p>
       </div>
-      <div className="my-container pt-40 flex items-center justify-between flex-col lg:flex-row ">
+      <div className="my-container flex items-center justify-between flex-col lg:flex-row ">
         <div className="py-10 space-y-4 max-w-xl">
           <p className="text-info font-semibold">Our Story</p>
-          <h1 className="text-5xl text-gray-600 font-semibold">
+          <h1 className="text-5xl text-gray-100 font-bold">
             Traditional & Modern Service{" "}
             <span className="text-yellow-500">Since 1970</span>
           </h1>
-          <p className="text-gray-500">
+          <p className="text-gray-300">
             Ut neque turpis dolor sit amet consectetur adipiscing elit purus
             egestas diam sit vitae egestas suspendisse amet ultricies eu. Eget
             at porttitor morbi blandit ac vitae, dolor. Gravida eu vel ac
