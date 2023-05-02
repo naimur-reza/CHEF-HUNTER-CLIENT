@@ -20,7 +20,7 @@ const Recipe = () => {
   const { id, name, bio, experience, image, recipes1, likes, recipes } =
     allData || {};
   return (
-    <div className="my-container py-10">
+    <div className="my-container py-10 p-5">
       {/* chef details */}
       <div className="card lg:h-80 lg:card-side bg-base-100 shadow-xl w-fit mx-auto ">
         <figure>
@@ -58,7 +58,7 @@ const Recipe = () => {
         </h1>
         {recipes1.map((rc) => {
           return (
-            <div className="card lg:card-side  shadow-xl my-5  bg-white bg-opacity-10 backdrop-blur-md">
+            <div className="card lg:card-side h-96 p-3 shadow-xl my-5  bg-white bg-opacity-10 backdrop-blur-md">
               <figure>
                 <img
                   className="h-full w-full  mask mask-hexagon"

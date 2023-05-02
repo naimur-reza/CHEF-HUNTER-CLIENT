@@ -6,10 +6,12 @@ import Register from "../pages/Register";
 import Home from "../pages/Home";
 import RecipeLayout from "../layout/recipeLayout";
 import Recipe from "../pages/Recipe";
+import ErrorPage from "../pages/ErrorPage";
 const router = createBrowserRouter([
   {
     path: "/",
     element: <LoginLayout></LoginLayout>,
+    errorElement: <ErrorPage />,
     children: [
       {
         path: "/",
