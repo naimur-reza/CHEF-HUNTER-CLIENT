@@ -4,6 +4,7 @@ import { FaUserAlt } from "react-icons/fa";
 import { AuthContext } from "../../providers/AuthProvider/AuthProvider";
 const Header = () => {
   const { user, logOut } = useContext(AuthContext);
+  console.log(user.photoURL);
   return (
     <div className="bg-black bg-transparent bg-opacity-20">
       <div className="navbar  text-white my-container">
@@ -22,7 +23,7 @@ const Header = () => {
           {user ? (
             <div className="dropdown ">
               {" "}
-              <Link to={"/login"} className="  btn btn-circle btn-outline ml-3">
+              <Link className="  btn btn-circle btn-outline ml-3">
                 <img
                   className="rounded-full"
                   src={user?.photoURL}
