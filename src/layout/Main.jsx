@@ -2,16 +2,19 @@ import React from "react";
 import Header from "../components/shared/Header";
 import { Outlet } from "react-router-dom";
 import Footer from "../components/shared/Footer";
-
+// import banner from "../../src/assets/images/banner.jpg";
+import "./Main.css";
 const Main = () => {
   return (
-    <div>
-      <Header />
-      <div className="min-h-[calc(100vh-284px)]">
-        <Outlet />
+    <>
+      <div className="banner ">
+        <Header />
+        <div className="min-h-[calc(100vh-284px)] ">
+          <Outlet />
+        </div>
+        <Footer />
       </div>
-      <Footer />
-    </div>
+    </>
   );
 };
 

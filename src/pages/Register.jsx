@@ -1,14 +1,32 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useContext, useState } from "react";
+import { Link, Navigate } from "react-router-dom";
 import { FcGoogle } from "react-icons/fc";
+import { AuthContext } from "../providers/AuthProvider/AuthProvider";
+import { toast } from "react-hot-toast";
 const Register = () => {
+  const [name, setName] = useState("");
+  const [photoUrl, setPhotoUrl] = useState("");
+  const [password, setPassword] = useState("");
+  const [email, setEmail] = useState("");
+  const { user, signInGoogle, createUser } = useContext(AuthContext);
+  const handleRegister = (e) => {
+    e.preventDefault();
+    createUser(email, password)
+      .then((res) => {
+        console.log(res.user);
+        toast.success("Registration successful");
+      })
+      .catch((err) => {
+        toast.error(err.message);
+      });
+  };
   return (
     <div class=" p-5 flex flex-col justify-center ">
       <div class="w-full p-6 m-auto bg-white rounded-md shadow-md   lg:max-w-lg">
         <h1 class="text-3xl font-semibold text-center text-gray-700">
           Please Register
         </h1>
-        <form class="space-y-4">
+        <form onSubmit={handleRegister} class="space-y-4">
           <div>
             <label class="label">
               <span class="text-base label-text">Name</span>
@@ -37,6 +55,8 @@ const Register = () => {
               type="text"
               placeholder="Email Address"
               class="w-full input input-bordered"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
             />
           </div>
           <div>
@@ -47,6 +67,8 @@ const Register = () => {
               type="password"
               placeholder="Enter Password"
               class="w-full input input-bordered"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
             />
           </div>
           <a
@@ -65,7 +87,10 @@ const Register = () => {
             <button class="btn btn-success btn-block">Register</button>
           </div>
           <div>
-            <button class="btn btn-success btn-block inline-flex items-center gap-4">
+            <button
+              onClick={signInGoogle}
+              class="btn btn-success btn-block inline-flex items-center gap-4"
+            >
               <FcGoogle width={30} height={30} /> Continue With Google
             </button>
           </div>

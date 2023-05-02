@@ -1,0 +1,10 @@
+.banner {
+  background-size: cover;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.712), rgba(0, 0, 0, 0.726)),
+    url("../../src/assets/images/banner.jpg");
+  height: 550px;
+  width: 100vw;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: cover;
+}
