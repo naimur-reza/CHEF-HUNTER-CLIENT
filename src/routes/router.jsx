@@ -8,6 +8,7 @@ import RecipeLayout from "../layout/recipeLayout";
 import Recipe from "../pages/Recipe";
 import ErrorPage from "../pages/ErrorPage";
 import Loader from "../pages/Loader";
+import PrivateRoutes from "./PrivateRoutes";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -36,10 +37,6 @@ const router = createBrowserRouter([
         path: "/home",
         element: <Home />,
       },
-      {
-        path: "loader",
-        element: <Loader />,
-      },
     ],
   },
   {
@@ -50,7 +47,15 @@ const router = createBrowserRouter([
         path: "/recipe/:id",
         loader: ({ params }) =>
           fetch(`http://localhost:5000/recipe/${params.id}`),
-        element: <Recipe />,
+        element: (
+          <PrivateRoutes>
+            <Recipe />
+          </PrivateRoutes>
+        ),
+      },
+      {
+        path: "loader",
+        element: <Loader />,
       },
     ],
   },

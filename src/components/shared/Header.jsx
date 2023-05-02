@@ -20,7 +20,10 @@ const Header = () => {
             <Link>Contact</Link>
           </div>
           {user ? (
-            <div className="dropdown ">
+            <div
+              data-tip={user?.email}
+              className="dropdown tooltip tooltip-bottom tooltip-warning "
+            >
               {" "}
               <Link className="  btn btn-circle btn-outline ml-3">
                 <img
@@ -31,7 +34,7 @@ const Header = () => {
               </Link>
               <ul
                 tabIndex={0}
-                className="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52"
+                className="dropdown-content  menu p-2 shadow bg-black bg-opacity-70 rounded-box w-fit"
               >
                 <li>
                   <Link className="text-white" to={"/profile"}>

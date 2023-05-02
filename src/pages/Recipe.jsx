@@ -8,7 +8,12 @@ import {
   FaStar,
   FaThumbsUp,
 } from "react-icons/fa";
-import { Navigate, useLoaderData, useNavigation } from "react-router-dom";
+import {
+  Navigate,
+  ScrollRestoration,
+  useLoaderData,
+  useNavigation,
+} from "react-router-dom";
 import Loader from "./Loader";
 import LazyLoad from "react-lazyload";
 
@@ -28,6 +33,7 @@ const Recipe = () => {
   };
   return (
     <div className="my-container py-10 p-5">
+      <ScrollRestoration />
       {/* chef details */}
       <div className="card lg:h-80 lg:card-side bg-base-100 backdrop-blur-sm bg-opacity-10 shadow-xl w-fit mx-auto ">
         <figure>
