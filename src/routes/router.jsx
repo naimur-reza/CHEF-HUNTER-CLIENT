@@ -7,6 +7,7 @@ import Home from "../pages/Home";
 import RecipeLayout from "../layout/recipeLayout";
 import Recipe from "../pages/Recipe";
 import ErrorPage from "../pages/ErrorPage";
+import Loader from "../pages/Loader";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -34,6 +35,10 @@ const router = createBrowserRouter([
       {
         path: "/home",
         element: <Home />,
+      },
+      {
+        path: "loader",
+        element: <Loader />,
       },
     ],
   },

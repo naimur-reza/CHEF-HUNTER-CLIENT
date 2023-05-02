@@ -8,10 +8,16 @@ import {
   FaStar,
   FaThumbsUp,
 } from "react-icons/fa";
-import { useLoaderData } from "react-router-dom";
+import { Navigate, useLoaderData, useNavigation } from "react-router-dom";
+import Loader from "./Loader";
+import LazyLoad from "react-lazyload";
 
 const Recipe = () => {
   const allData = useLoaderData();
+  const navigate = useNavigation();
+  if (navigate.state === "loading") {
+    return <Navigate to={"/loader"}></Navigate>;
+  }
   const [disId, setDisId] = useState("");
   const { id, name, bio, experience, image, recipes1, likes, recipes } =
     allData || {};
@@ -25,7 +31,9 @@ const Recipe = () => {
       {/* chef details */}
       <div className="card lg:h-80 lg:card-side bg-base-100 backdrop-blur-sm bg-opacity-10 shadow-xl w-fit mx-auto ">
         <figure>
-          <img className="h-full w-full" src={image} alt="Album" />
+          <LazyLoad height={200}>
+            <img className="h-full w-full" src={image} alt="Album" />
+          </LazyLoad>
         </figure>
         <div className="card-body max-w-md   ">
           <h2 className="card-title text-3xl text-warning font-bold">{name}</h2>
@@ -61,14 +69,16 @@ const Recipe = () => {
           return (
             <div
               key={idx}
-              className="card lg:card-side h-96 p-3 shadow-xl my-5  bg-white bg-opacity-10 backdrop-blur-md"
+              className="card lg:card-side lg:h-96 p-3 shadow-xl my-5  bg-white bg-opacity-10 backdrop-blur-md"
             >
               <figure>
-                <img
-                  className="h-full w-full  mask mask-hexagon"
-                  src={rc?.image}
-                  alt="Album"
-                />
+                <LazyLoad height={200}>
+                  <img
+                    className="h-full w-full  mask mask-hexagon"
+                    src={rc?.image}
+                    alt="Album"
+                  />
+                </LazyLoad>
               </figure>
               <div className="card-body max-w-3xl">
                 <h2 className="card-title text-3xl text-gray-100">

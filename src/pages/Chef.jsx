@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { FaHistory, FaPizzaSlice, FaThumbsUp } from "react-icons/fa";
+import LazyLoad from "react-lazyload";
 import { Link } from "react-router-dom";
 
 const Chef = () => {
@@ -15,12 +16,15 @@ const Chef = () => {
       <h1 className="text-4xl text-gray-100 font-semibold text-center">
         Meet Our Chef
       </h1>
+
       <div className="grid grid-cols-3 gap-5 pt-10">
         {chefs.map((chef) => {
           return (
             <div className="card    glass">
               <figure className="h-64 ">
-                <img className="w-full h-full" src={chef.image} />
+                <LazyLoad once>
+                  <img className="w-full h-full" src={chef.image} />
+                </LazyLoad>
               </figure>
               <div className="card-body">
                 <h2 className="card-title text-gray-100">{chef?.name}</h2>
