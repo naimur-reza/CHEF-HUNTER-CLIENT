@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { FaHistory, FaPizzaSlice, FaThumbsUp } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Chef = () => {
   const [chefs, setChefs] = useState([]);
@@ -15,7 +16,7 @@ const Chef = () => {
       <div className="grid grid-cols-3 gap-5 pt-10">
         {chefs.map((chef) => {
           return (
-            <div className="card   glass">
+            <div className="card    glass">
               <figure className="h-64 ">
                 <img className="w-full h-full" src={chef.image} />
               </figure>
@@ -41,9 +42,12 @@ const Chef = () => {
                   {chef?.likes}
                 </p>
                 <div className="card-actions justify-end">
-                  <button className="btn btn-outline btn-error">
+                  <Link
+                    to={`/recipe/${chef?.id}`}
+                    className="btn btn-outline btn-error"
+                  >
                     View Recipes
-                  </button>
+                  </Link>
                 </div>
               </div>
             </div>

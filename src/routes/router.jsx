@@ -4,6 +4,8 @@ import LoginLayout from "../layout/LoginLayout";
 import Login from "../pages/Login";
 import Register from "../pages/Register";
 import Home from "../pages/Home";
+import RecipeLayout from "../layout/recipeLayout";
+import Recipe from "../pages/Recipe";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -30,6 +32,18 @@ const router = createBrowserRouter([
       {
         path: "/home",
         element: <Home />,
+      },
+    ],
+  },
+  {
+    path: "/recipe",
+    element: <RecipeLayout />,
+    children: [
+      {
+        path: "/recipe/:id",
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/recipe/${params.id}`),
+        element: <Recipe />,
       },
     ],
   },
