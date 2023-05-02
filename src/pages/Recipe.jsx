@@ -11,39 +11,40 @@ import {
 import { useLoaderData } from "react-router-dom";
 
 const Recipe = () => {
-  const [bookmark, isBookmark] = useState(false);
   const allData = useLoaderData();
-  const handleBookmark = () => {
-    toast.success("Added To Bookmark");
-    isBookmark(true);
-  };
+  const [disId, setDisId] = useState("");
   const { id, name, bio, experience, image, recipes1, likes, recipes } =
     allData || {};
+
+  const handleButton = (e) => {
+    e.target.disabled = true;
+    toast.success("Added to Bookmark");
+  };
   return (
     <div className="my-container py-10 p-5">
       {/* chef details */}
-      <div className="card lg:h-80 lg:card-side bg-base-100 shadow-xl w-fit mx-auto ">
+      <div className="card lg:h-80 lg:card-side bg-base-100 backdrop-blur-sm bg-opacity-10 shadow-xl w-fit mx-auto ">
         <figure>
           <img className="h-full w-full" src={image} alt="Album" />
         </figure>
-        <div className="card-body max-w-md">
+        <div className="card-body max-w-md   ">
           <h2 className="card-title text-3xl text-warning font-bold">{name}</h2>
-          <p className="tracking-wide text-gray-600">{bio}</p>
-          <p className="inline-flex items-center gap-2">
-            <span className="font-semibold text-gray-700 inline-flex items-center gap-1">
+          <p className="tracking-wide text-gray-100">{bio}</p>
+          <p className="inline-flex items-center gap-2 text-gray-100">
+            <span className="font-semibold text-gray-100 inline-flex items-center gap-1">
               <FaHistory className="text-green-400" /> Experience
             </span>
             : {experience} year
           </p>
-          <p className="inline-flex items-center gap-2">
+          <p className="inline-flex items-center gap-2 text-gray-100">
             {" "}
-            <span className="font-semibold text-gray-700 inline-flex items-center gap-1 t">
+            <span className="font-semibold text-gray-100 inline-flex items-center gap-1 t">
               <FaPizzaSlice className="text-pink-500" /> Recipes:
             </span>{" "}
             {recipes}
           </p>
-          <p className="inline-flex gap-2 items-center">
-            <span className="font-semibold text-gray-700 inline-flex items-center gap-2">
+          <p className="inline-flex gap-2 items-center text-gray-100">
+            <span className="font-semibold text-gray-100 inline-flex items-center gap-2">
               <FaThumbsUp className="text-sky-500" /> Likes:
             </span>
             {likes}
@@ -56,9 +57,12 @@ const Recipe = () => {
         <h1 className="text-center text-4xl  font-bold text-gray-100 py-5">
           Food Recipes
         </h1>
-        {recipes1.map((rc) => {
+        {recipes1.map((rc, idx) => {
           return (
-            <div className="card lg:card-side h-96 p-3 shadow-xl my-5  bg-white bg-opacity-10 backdrop-blur-md">
+            <div
+              key={idx}
+              className="card lg:card-side h-96 p-3 shadow-xl my-5  bg-white bg-opacity-10 backdrop-blur-md"
+            >
               <figure>
                 <img
                   className="h-full w-full  mask mask-hexagon"
@@ -83,12 +87,12 @@ const Recipe = () => {
                 </p>
                 <div className="card-actions justify-end">
                   <button
-                    onClick={() => handleBookmark(id)}
-                    className={`btn py-3  btn-warning rounded-full ${
-                      bookmark && "btn-disabled"
-                    }`}
+                    onClick={handleButton}
+                    id={idx}
+                    className={`btn py-3  btn-warning rounded-full `}
                   >
-                    <FaHeart /> Add To Favourite
+                    <FaHeart className="text-pink-500" /> &nbsp; Add To
+                    Favourite
                   </button>
                 </div>
               </div>

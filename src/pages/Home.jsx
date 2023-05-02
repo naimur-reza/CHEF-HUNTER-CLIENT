@@ -8,9 +8,9 @@ const Home = () => {
     <div className="">
       <div className="py-20">
         <h1 className="text-5xl text-gray-200 font-semibold font-mono text-center py-5">
-          Welcome To CooksDen
+          Welcome To <span className="text-yellow-500">CooksDen</span>
         </h1>
-        <p className="text-center py-5 text-gray-300 tracking-wide text-lg  px-96 font-semibold">
+        <p className="text-center py-5 text-gray-300 tracking-wide text-lg px-8 lg:px-96 font-semibold">
           The culinary expert that your fine dining restaurant has been waiting
           for. Set the table for a successful online venture with ease!
         </p>
