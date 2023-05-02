@@ -4,12 +4,11 @@ import { FaUserAlt } from "react-icons/fa";
 import { AuthContext } from "../../providers/AuthProvider/AuthProvider";
 const Header = () => {
   const { user, logOut } = useContext(AuthContext);
-  console.log(user.photoURL);
   return (
     <div className="bg-black bg-transparent bg-opacity-20">
       <div className="navbar  text-white my-container">
         <div className="navbar-start">
-          <Link to={"/home"} className="btn btn-ghost normal-case text-xl">
+          <Link to={"/home"} className="btn btn-ghost normal-case text-2xl">
             CooksDen
           </Link>
         </div>

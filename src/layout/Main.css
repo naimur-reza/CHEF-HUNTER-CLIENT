@@ -1,8 +1,18 @@
 .banner {
   background-size: cover;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.712), rgba(0, 0, 0, 0.726)),
+  background-image: linear-gradient(rgba(0, 0, 0, 0.61), rgba(0, 0, 0, 0.664)),
     url("../../src/assets/images/banner.jpg");
   height: 550px;
+  width: 100vw;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: cover;
+}
+.recipe {
+  background-size: cover;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.459), rgba(0, 0, 0, 0.452)),
+    url("../../src/assets/images/recipe.jpg");
+  height: calc(100vh-0);
   width: 100vw;
   background-repeat: no-repeat;
   background-position: bottom;

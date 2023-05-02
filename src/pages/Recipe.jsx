@@ -1,18 +1,30 @@
-import React from "react";
-import { FaHistory, FaPizzaSlice, FaStar, FaThumbsUp } from "react-icons/fa";
+import { Rating } from "@smastrom/react-rating";
+import React, { useState } from "react";
+import { toast } from "react-hot-toast";
+import {
+  FaHeart,
+  FaHistory,
+  FaPizzaSlice,
+  FaStar,
+  FaThumbsUp,
+} from "react-icons/fa";
 import { useLoaderData } from "react-router-dom";
 
 const Recipe = () => {
+  const [bookmark, isBookmark] = useState(false);
   const allData = useLoaderData();
-  console.log(allData);
-  const { name, bio, experience, image, recipes1, likes, recipes } =
+  const handleBookmark = () => {
+    toast.success("Added To Bookmark");
+    isBookmark(true);
+  };
+  const { id, name, bio, experience, image, recipes1, likes, recipes } =
     allData || {};
   return (
     <div className="my-container py-10">
       {/* chef details */}
-      <div className="card h-72 w-fit mx-auto  card-side bg-base-100 shadow-xl">
+      <div className="card lg:h-80 lg:card-side bg-base-100 shadow-xl w-fit mx-auto ">
         <figure>
-          <img className="w-full h-full" src={image} alt="Movie" />
+          <img className="h-full w-full" src={image} alt="Album" />
         </figure>
         <div className="card-body max-w-md">
           <h2 className="card-title text-3xl text-warning font-bold">{name}</h2>
@@ -38,31 +50,46 @@ const Recipe = () => {
           </p>
         </div>
       </div>
+      <hr className="w-2/3 mt-20 border border-gray- mx-auto " />
       {/* recipe section */}
       <div className="py-14">
-        <h1 className="text-center text-4xl  font-semibold">Food Recipes</h1>
+        <h1 className="text-center text-4xl  font-bold text-gray-100 py-5">
+          Food Recipes
+        </h1>
         {recipes1.map((rc) => {
           return (
-            <div className="card lg:card-side bg-base-100 shadow-xl my-5">
+            <div className="card lg:card-side  shadow-xl my-5  bg-white bg-opacity-10 backdrop-blur-md">
               <figure>
-                <img className="h-full w-full " src={rc?.image} alt="Album" />
+                <img
+                  className="h-full w-full  mask mask-hexagon"
+                  src={rc?.image}
+                  alt="Album"
+                />
               </figure>
               <div className="card-body max-w-3xl">
-                <h2 className="card-title text-3xl">{rc?.name}</h2>
-                <p className="inline-flex items-center gap-1">
-                  <FaStar className="text-yellow-400" width={33} height={33} />{" "}
-                  {rc?.rating}
+                <h2 className="card-title text-3xl text-gray-100">
+                  {rc?.name}
+                </h2>
+
+                <h1></h1>
+
+                <p>
+                  <span className="font-bold text-gray-100">Ingredients: </span>
+                  <span className="text-gray-300">{rc?.ingredients}</span>
                 </p>
                 <p>
-                  <span className="font-semibold">Ingredients: </span>
-                  <span className="text-gray-500">{rc?.ingredients}</span>
-                </p>
-                <p>
-                  <span className="font-semibold">Instruction: </span>
-                  <span className="text-gray-500">{rc?.instructions}</span>
+                  <span className="font-bold text-gray-100">Instruction: </span>
+                  <span className="text-gray-300">{rc?.instructions}</span>
                 </p>
                 <div className="card-actions justify-end">
-                  <button className="btn btn-primary">Listen</button>
+                  <button
+                    onClick={() => handleBookmark(id)}
+                    className={`btn py-3  btn-warning rounded-full ${
+                      bookmark && "btn-disabled"
+                    }`}
+                  >
+                    <FaHeart /> Add To Favourite
+                  </button>
                 </div>
               </div>
             </div>
