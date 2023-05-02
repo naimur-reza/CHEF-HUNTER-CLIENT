@@ -9,8 +9,28 @@ const Chef = () => {
   }, []);
   console.log(chefs);
   return (
-    <div>
-      <h1>Meet Our Chef</h1>
+    <div className="py-10 my-container gap-4">
+      <h1 className="text-3xl font-semibold text-center">Meet Our Chef</h1>
+      <div className="grid grid-cols-3 gap-5 pt-10">
+        {chefs.map((chef) => {
+          return (
+            <div className="card   glass">
+              <figure className="h-64 ">
+                <img className="w-full h-full" src={chef.image} />
+              </figure>
+              <div className="card-body">
+                <h2 className="card-title">{chef?.name}</h2>
+                <p>How to park your car at your garage?</p>
+                <div className="card-actions justify-end">
+                  <button className="btn btn-outline btn-error">
+                    View Recipes
+                  </button>
+                </div>
+              </div>
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
 };
