@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { FaHistory, FaPizzaSlice, FaThumbsUp } from "react-icons/fa";
 
 const Chef = () => {
   const [chefs, setChefs] = useState([]);
@@ -20,7 +21,25 @@ const Chef = () => {
               </figure>
               <div className="card-body">
                 <h2 className="card-title">{chef?.name}</h2>
-                <p>How to park your car at your garage?</p>
+                <p className="inline-flex items-center gap-2">
+                  <span className="font-semibold text-gray-700 inline-flex items-center gap-1">
+                    <FaHistory /> Experience
+                  </span>
+                  : {chef?.experience} year
+                </p>
+                <p className="inline-flex items-center gap-2">
+                  {" "}
+                  <span className="font-semibold text-gray-700 inline-flex items-center gap-1">
+                    <FaPizzaSlice /> Recipes:
+                  </span>{" "}
+                  {chef?.recipes}
+                </p>
+                <p className="inline-flex gap-2 items-center">
+                  <span className="font-semibold text-gray-700 inline-flex items-center gap-2">
+                    <FaThumbsUp /> Likes:
+                  </span>
+                  {chef?.likes}
+                </p>
                 <div className="card-actions justify-end">
                   <button className="btn btn-outline btn-error">
                     View Recipes
