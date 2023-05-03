@@ -39,7 +39,7 @@ const Login = () => {
             <input
               type="text"
               placeholder="Email Address"
-              class="w-full input input-bordered  text-white"
+              class="w-full input input-bordered  text-gray-700"
             />
           </div>
           <div>
@@ -50,7 +50,7 @@ const Login = () => {
               required
               type="password"
               placeholder="Enter Password"
-              class="w-full input input-bordered  text-white"
+              class="w-full input input-bordered  text-gray-700"
             />
           </div>
           <a

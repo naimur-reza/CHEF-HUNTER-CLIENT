@@ -46,7 +46,7 @@ const Register = () => {
               type="text"
               required
               placeholder="Enter Name"
-              class="w-full input input-bordered"
+              class="w-full input input-bordered text-gray-700"
               value={name}
               onChange={(e) => setName(e.target.value)}
             />
@@ -59,7 +59,7 @@ const Register = () => {
               type="text"
               required
               placeholder="Photo Url"
-              class="w-full input input-bordered"
+              class="w-full input input-bordered text-gray-700"
               value={photoUrl}
               onChange={(e) => setPhotoUrl(e.target.value)}
             />
@@ -72,7 +72,7 @@ const Register = () => {
               required
               type="text"
               placeholder="Email Address"
-              class="w-full input input-bordered"
+              class="w-full input input-bordered text-gray-700"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
             />
@@ -85,7 +85,7 @@ const Register = () => {
               required
               type="password"
               placeholder="Enter Password"
-              class="w-full input input-bordered"
+              class="w-full input input-bordered text-gray-700"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
             />
