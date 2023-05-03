@@ -33,14 +33,14 @@ const Register = () => {
   };
   return (
     <div class=" p-5 flex flex-col justify-center ">
-      <div class="w-full p-6 m-auto bg-white rounded-md shadow-md   lg:max-w-lg">
-        <h1 class="text-3xl font-semibold text-center text-gray-700">
+      <div class="w-full p-6 m-auto bg-white rounded-md shadow-md glass bg-opacity-10   lg:max-w-lg">
+        <h1 class="text-3xl font-semibold text-center text-gray-200">
           Please Register
         </h1>
         <form onSubmit={handleRegister} class="space-y-4">
           <div>
             <label class="label">
-              <span class="text-base label-text">Name</span>
+              <span class="text-white label-text">Name</span>
             </label>
             <input
               type="text"
@@ -53,7 +53,7 @@ const Register = () => {
           </div>
           <div>
             <label class="label">
-              <span class="text-base label-text">Photo Url</span>
+              <span class="text-white label-text">Photo Url</span>
             </label>
             <input
               type="text"
@@ -66,7 +66,7 @@ const Register = () => {
           </div>
           <div>
             <label class="label">
-              <span class="text-base label-text">Email</span>
+              <span class="text-white label-text">Email</span>
             </label>
             <input
               required
@@ -79,7 +79,7 @@ const Register = () => {
           </div>
           <div>
             <label class="label">
-              <span class="text-base label-text">Password</span>
+              <span class="text-white label-text">Password</span>
             </label>
             <input
               required
@@ -92,11 +92,11 @@ const Register = () => {
           </div>
           <a
             href="#"
-            class="text-xs text-gray-600 hover:underline hover:text-blue-600"
+            class="text-xs text-gray-200 hover:underline hover:text-blue-600"
           >
             Forget Password?
           </a>
-          <p className="text-xs text-gray-600  ">
+          <p className="text-xs text-gray-200  ">
             Already have an account?{" "}
             <Link to={"../login"} className="hover:underline">
               Login
