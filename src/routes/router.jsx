@@ -10,6 +10,8 @@ import ErrorPage from "../pages/ErrorPage";
 import Loader from "../pages/Loader";
 import PrivateRoutes from "./PrivateRoutes";
 import Blog from "../pages/Blog";
+import News from "../pages/News";
+import Contact from "../pages/Contact";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -18,7 +20,7 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <Navigate to="/home"></Navigate>,
+        element: <Navigate to="/home/"></Navigate>,
       },
       {
         path: "login",
@@ -35,12 +37,20 @@ const router = createBrowserRouter([
     element: <Main></Main>,
     children: [
       {
-        path: "/home",
+        path: "/home/",
         element: <Home />,
       },
       {
         path: "blog",
         element: <Blog />,
+      },
+      {
+        path: "news",
+        element: <News />,
+      },
+      {
+        path: "contact",
+        element: <Contact />,
       },
     ],
   },

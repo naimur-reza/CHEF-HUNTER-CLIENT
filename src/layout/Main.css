@@ -2,9 +2,8 @@
   background-size: cover;
   background-image: linear-gradient(rgba(0, 0, 0, 0.61), rgba(0, 0, 0, 0.664)),
     url("../../src/assets/images/banner1.jpg");
-  height: calc(100vh-0);
   background-repeat: no-repeat;
-  background-position: bottom;
+  background-position: top;
   background-size: cover;
 }
 .recipe {

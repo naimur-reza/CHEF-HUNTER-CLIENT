@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { FaUserAlt } from "react-icons/fa";
 import { AuthContext } from "../../providers/AuthProvider/AuthProvider";
 const Header = () => {
@@ -9,16 +9,45 @@ const Header = () => {
     <div className="bg-black bg-opacity-30 ">
       <div className="navbar  text-white my-container">
         <div className="navbar-start">
-          <Link to={"/home"} className="btn btn-ghost normal-case text-2xl">
+          <NavLink to={"/home/"} className="btn btn-ghost normal-case text-2xl">
             CooksDen
-          </Link>
+          </NavLink>
         </div>
 
         <div className="navbar-end">
           <div className="space-x-5 font-semibold text-white">
-            <Link to={"blog"}>Blog</Link>
-            <Link>News</Link>
-            <Link>Contact</Link>
+            <NavLink
+              to={"/home/"}
+              className={({ isActive }) =>
+                isActive ? "text-yellow-400" : "text-white"
+              }
+            >
+              Home
+            </NavLink>
+            <NavLink
+              className={({ isActive }) =>
+                isActive ? "text-yellow-400" : "text-white"
+              }
+              to={"blog"}
+            >
+              Blog
+            </NavLink>
+            <NavLink
+              className={({ isActive }) =>
+                isActive ? "text-yellow-400" : "text-white"
+              }
+              to={"news"}
+            >
+              News
+            </NavLink>
+            <NavLink
+              to={"contact"}
+              className={({ isActive }) =>
+                isActive ? "text-yellow-400" : "text-white"
+              }
+            >
+              Contact
+            </NavLink>
           </div>
           {user ? (
             <div
@@ -38,24 +67,24 @@ const Header = () => {
                 className="dropdown-content  menu p-2 shadow bg-black bg-opacity-70 rounded-box w-fit"
               >
                 <li>
-                  <Link className="text-white" to={"/profile"}>
+                  <NavLink className="text-white" to={"/profile"}>
                     Profile
-                  </Link>
+                  </NavLink>
                 </li>
                 <li>
-                  <Link className="text-white" onClick={logOut}>
+                  <NavLink className="text-white" onClick={logOut}>
                     Logout
-                  </Link>
+                  </NavLink>
                 </li>
               </ul>
             </div>
           ) : (
-            <Link
+            <NavLink
               to={"/login"}
               className=" btn btn-circle btn-outline ml-3 text-white"
             >
               <FaUserAlt className="" />
-            </Link>
+            </NavLink>
           )}
         </div>
       </div>

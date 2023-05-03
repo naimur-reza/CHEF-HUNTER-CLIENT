@@ -11,6 +11,9 @@ const Register = () => {
   const [email, setEmail] = useState("");
   const { user, signInGoogle, createUser, profileUpdate } =
     useContext(AuthContext);
+  if (user) {
+    return <Navigate to="/" />;
+  }
   const handleRegister = (e) => {
     e.preventDefault();
     createUser(email, password)

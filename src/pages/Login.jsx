@@ -10,6 +10,9 @@ const Login = () => {
   const [email, setEmail] = useState("");
   //   get the function
   const { logIn, user, signInGoogle, signInGithub } = useContext(AuthContext);
+  if (user) {
+    return <Navigate to="/" />;
+  }
   const handleLogin = (e) => {
     e.preventDefault(); // Prevent
     logIn(email, password)
@@ -63,12 +66,7 @@ const Login = () => {
             </Link>
           </p>
           <div>
-            <input
-              required
-              type="submit"
-              placeholder="Login"
-              class="btn btn-success btn-block"
-            />
+            <button class="btn btn-success btn-block">Login</button>
           </div>
           <div>
             <button
