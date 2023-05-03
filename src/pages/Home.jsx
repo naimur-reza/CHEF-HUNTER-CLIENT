@@ -7,15 +7,15 @@ const Home = () => {
   return (
     <div className="">
       <div className="py-20">
-        <h1 className="text-5xl text-gray-200 font-semibold font-mono text-center py-5">
+        <h1 className="text-6xl text-gray-200 font-semibold font-mono text-center py-5">
           Welcome To <span className="text-yellow-500">CooksDen</span>
         </h1>
-        <p className="text-center py-5 text-gray-300 tracking-wide text-lg px-8 lg:px-96 font-semibold">
+        <p className="text-center py-5 text-gray-300 tracking-wide text-xl px-8 lg:px-96 font-semibold">
           The culinary expert that your fine dining restaurant has been waiting
           for. Set the table for a successful online venture with ease!
         </p>
       </div>
-      <div className="my-container flex items-center justify-between flex-col lg:flex-row ">
+      <div className="my-container lg:mt-32 p-5 flex items-center justify-between flex-col lg:flex-row ">
         <div className="py-10 space-y-4 max-w-xl">
           <p className="text-info font-semibold">Our Story</p>
           <h1 className="text-5xl text-gray-100 font-bold">

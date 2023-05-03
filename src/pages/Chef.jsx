@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 const Chef = () => {
   const [chefs, setChefs] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/chef")
+    fetch("https://cookdens-server-naimur-reza.vercel.app/chef")
       .then((res) => res.json())
       .then((data) => setChefs(data));
   }, []);
@@ -17,11 +17,11 @@ const Chef = () => {
         Meet Our Chef
       </h1>
 
-      <div className="grid grid-cols-3 gap-5 pt-10">
+      <div className="grid lg:grid-cols-3 p-5 grid-cols-1 gap-5 pt-10">
         {chefs.map((chef) => {
           return (
             <div className="card    glass">
-              <figure className="h-64 ">
+              <figure className=" ">
                 <LazyLoad once>
                   <img className="w-full h-full" src={chef.image} />
                 </LazyLoad>

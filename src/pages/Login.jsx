@@ -1,13 +1,15 @@
 import React, { useContext, useState } from "react";
-import { Link, Navigate } from "react-router-dom";
+import { Link, Navigate, ScrollRestoration } from "react-router-dom";
 import { AuthContext } from "../providers/AuthProvider/AuthProvider";
 import { toast } from "react-hot-toast";
+import { FcGoogle } from "react-icons/fc";
+import { FaGithub } from "react-icons/fa";
 
 const Login = () => {
   const [password, setPassword] = useState("");
   const [email, setEmail] = useState("");
   //   get the function
-  const { logIn, user } = useContext(AuthContext);
+  const { logIn, user, signInGoogle, signInGithub } = useContext(AuthContext);
   const handleLogin = (e) => {
     e.preventDefault(); // Prevent
     logIn(email, password)
@@ -21,6 +23,7 @@ const Login = () => {
   };
   return (
     <div class="relative p-5 flex flex-col justify-center h-screen overflow-hidden">
+      <ScrollRestoration />
       <div class="w-full p-6 m-auto bg-white rounded-md shadow-md   lg:max-w-lg">
         <h1 class="text-3xl font-semibold text-center text-gray-700">
           Please Login
@@ -41,6 +44,7 @@ const Login = () => {
               <span class="text-base label-text">Password</span>
             </label>
             <input
+              required
               type="password"
               placeholder="Enter Password"
               class="w-full input input-bordered"
@@ -60,10 +64,27 @@ const Login = () => {
           </p>
           <div>
             <input
+              required
               type="submit"
               placeholder="Login"
               class="btn btn-success btn-block"
             />
+          </div>
+          <div>
+            <button
+              onClick={signInGoogle}
+              class="btn btn-outline btn-block inline-flex items-center gap-4"
+            >
+              <FcGoogle width={30} height={30} /> Continue With Google
+            </button>
+          </div>
+          <div>
+            <button
+              onClick={signInGithub}
+              class="btn btn-outline btn-block inline-flex items-center gap-4"
+            >
+              <FaGithub /> Continue With Github
+            </button>
           </div>
         </form>
       </div>

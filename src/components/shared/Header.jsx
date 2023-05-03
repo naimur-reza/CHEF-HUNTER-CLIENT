@@ -16,7 +16,7 @@ const Header = () => {
 
         <div className="navbar-end">
           <div className="space-x-5 font-semibold text-white">
-            <Link>Blog</Link>
+            <Link to={"blog"}>Blog</Link>
             <Link>News</Link>
             <Link>Contact</Link>
           </div>

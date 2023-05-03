@@ -9,6 +9,7 @@ import Recipe from "../pages/Recipe";
 import ErrorPage from "../pages/ErrorPage";
 import Loader from "../pages/Loader";
 import PrivateRoutes from "./PrivateRoutes";
+import Blog from "../pages/Blog";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -37,6 +38,10 @@ const router = createBrowserRouter([
         path: "/home",
         element: <Home />,
       },
+      {
+        path: "blog",
+        element: <Blog />,
+      },
     ],
   },
   {
@@ -46,7 +51,9 @@ const router = createBrowserRouter([
       {
         path: "/recipe/:id",
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/recipe/${params.id}`),
+          fetch(
+            `https://cookdens-server-naimur-reza.vercel.app/recipe/${params.id}`
+          ),
         element: (
           <PrivateRoutes>
             <Recipe />

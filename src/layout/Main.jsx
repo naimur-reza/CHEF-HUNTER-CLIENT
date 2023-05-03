@@ -13,9 +13,8 @@ const Main = () => {
         <div className="min-h-[calc(100vh-284px)] ">
           <Outlet />
         </div>
-        <LazyLoad>
-          <Footer />
-        </LazyLoad>
+
+        <Footer />
       </div>
     </>
   );
