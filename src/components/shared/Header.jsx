@@ -55,9 +55,9 @@ const Header = () => {
               className="dropdown tooltip tooltip-left tooltip-warning "
             >
               {" "}
-              <button className="  btn btn-circle btn-outline ml-3">
+              <button className="  btn btn-circle avatar online   btn-outline ml-3">
                 <img
-                  className="rounded-full"
+                  className="rounded-full ring-4"
                   src={user?.photoURL}
                   alt="displayPhoto"
                 />

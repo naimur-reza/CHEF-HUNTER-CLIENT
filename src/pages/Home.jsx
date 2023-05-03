@@ -9,7 +9,7 @@ import LazyLoad from "react-lazyload";
 const Home = () => {
   return (
     <div className="">
-      <div className="flex items-center justify-center flex-col h-[calc(100vh-64px)] ">
+      <div className="flex items-center justify-center flex-col h-[100vh] banner2">
         <h1 className="text-6xl text-white font-semibold font-mono text-center py-5">
           Welcome To <span className="text-yellow-500">CooksDen</span>
         </h1>
@@ -18,9 +18,9 @@ const Home = () => {
           for. Set the table for a successful online venture with ease!
         </p>
       </div>
-      <div className="">
+      <div className=" bg-gray-200">
         <div className="my-container  lg:mt- p-5 flex items-center justify-between flex-col lg:flex-row ">
-          <div className="py-10 space-y-4 max-w-xl">
+          <div className="py-10 space-y-4 max-w-xl ">
             <p className="text-info font-semibold">Our Story</p>
             <h1 className="text-5xl text-gray-700 font-bold">
               Traditional & Modern Service{" "}

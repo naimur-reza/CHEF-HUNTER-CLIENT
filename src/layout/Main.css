@@ -25,11 +25,12 @@
   background-image: linear-gradient(rgba(0, 0, 0, 0.384), rgba(0, 0, 0, 0.479)),
     url("../../src/assets/images/banner2.jpg");
   background-repeat: no-repeat;
-  /* background-position: top; */
-  /* background-size: cover; */
-  /* height: 100vh; */
-  height: 100vh;
-  object-fit: cover;
+  background-position: left;
+  background-size: cover;
+  /* height: 100%; */
+  /* height: 950px; */
+  box-sizing: border-box;
+  object-fit: fill;
 }
 .banner4 {
   background-size: cover;
