@@ -71,16 +71,16 @@ const Recipe = () => {
         <h1 className="text-center text-4xl  font-bold text-gray-100 py-5">
           Food Recipes
         </h1>
-        {recipes1.map((rc, idx) => {
+        {recipes1?.map((rc, idx) => {
           return (
             <div
               key={idx}
-              className="card lg:card-side lg:h-96 p-3 shadow-xl my-5  bg-white bg-opacity-10 backdrop-blur-md"
+              className="card lg:card-side lg:h-[400px] p-7 shadow-xl my-5  bg-white bg-opacity-10 backdrop-blur-md"
             >
-              <figure>
+              <figure className="">
                 <LazyLoad height={200}>
                   <img
-                    className="h-full w-full  mask mask-hexagon"
+                    className="lg:h-full mx-auto w-5/6 w  mask mask-hexagon"
                     src={rc?.image}
                     alt="Album"
                   />

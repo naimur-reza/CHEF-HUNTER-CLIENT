@@ -28,7 +28,7 @@ const Header = () => {
               className={({ isActive }) =>
                 isActive ? "text-yellow-400" : "text-white"
               }
-              to={"blog"}
+              to={"../home/blog"}
             >
               Blog
             </NavLink>
@@ -36,12 +36,12 @@ const Header = () => {
               className={({ isActive }) =>
                 isActive ? "text-yellow-400" : "text-white"
               }
-              to={"news"}
+              to={"../home/news"}
             >
               News
             </NavLink>
             <NavLink
-              to={"contact"}
+              to={"../home/contact"}
               className={({ isActive }) =>
                 isActive ? "text-yellow-400" : "text-white"
               }

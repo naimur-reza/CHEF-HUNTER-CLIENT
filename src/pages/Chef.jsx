@@ -22,7 +22,7 @@ const Chef = () => {
           return (
             <div className="card    glass">
               <figure className=" ">
-                <LazyLoad once>
+                <LazyLoad height={200} once>
                   <img className="w-full h-full" src={chef.image} />
                 </LazyLoad>
               </figure>
