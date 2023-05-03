@@ -18,7 +18,7 @@ const Header = () => {
         </div>
 
         <div
-          className={`marker:lg:navbar-end absolute lg:flex-row flex-col items-center  flex z-10 duration-500  w-40 rounded-br-lg rounded-bl-lg   p-7 lg:p-0 lg:h-auto bg-green-200 lg:static ${
+          className={`lg:navbar-end absolute  lg:flex-row flex-col items-center  flex z-10 duration-500 left-0 w-40 rounded-br-lg rounded-bl-lg   p-7 lg:p-0 lg:h-auto bg-black lg:bg-transparent bg-opacity-80 lg:static ${
             isOpen ? "top-0" : "-top-96"
           }`}
         >
@@ -94,7 +94,7 @@ const Header = () => {
             </NavLink>
           )}
         </div>
-        <div className="ml-auto">
+        <div className="ml-auto lg:hidden">
           <Hamburger toggled={isOpen} toggle={setOpen} />
         </div>
       </div>
