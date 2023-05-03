@@ -3,6 +3,7 @@ import chef from "../assets/images/chef.png";
 import meal from "../assets/images/meal.png";
 import pizza from "../assets/images/pizza.png";
 import Chef from "./Chef";
+import SummerPromo from "../components/SummerPromo";
 const Home = () => {
   return (
     <div className="">
@@ -39,6 +40,7 @@ const Home = () => {
         </div>
       </div>
       <Chef />
+      <SummerPromo />
     </div>
   );
 };
