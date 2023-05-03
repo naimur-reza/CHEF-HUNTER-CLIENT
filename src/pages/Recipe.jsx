@@ -17,6 +17,7 @@ import {
 import Loader from "./Loader";
 import LazyLoad from "react-lazyload";
 import { AuthContext } from "../providers/AuthProvider/AuthProvider";
+import ReactStars from "react-stars";
 
 const Recipe = () => {
   const { user } = useContext(AuthContext);
@@ -96,7 +97,15 @@ const Recipe = () => {
                   {rc?.name}
                 </h2>
 
-                <h1></h1>
+                <h1>
+                  <ReactStars
+                    count={5}
+                    value={rc?.rating}
+                    size={24}
+                    color2={"#ffd700"}
+                    className="disabled"
+                  />
+                </h1>
 
                 <p>
                   <span className="font-bold text-gray-100">Ingredients: </span>
