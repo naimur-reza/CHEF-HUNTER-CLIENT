@@ -4,6 +4,7 @@ import { FaUserAlt } from "react-icons/fa";
 import { AuthContext } from "../../providers/AuthProvider/AuthProvider";
 const Header = () => {
   const { user, logOut } = useContext(AuthContext);
+  console.log(user);
   return (
     <div className="bg-black bg-opacity-30 ">
       <div className="navbar  text-white my-container">

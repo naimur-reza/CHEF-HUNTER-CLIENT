@@ -69,17 +69,11 @@ const AuthProvider = ({ children }) => {
   };
   // update profile with firebase
   const profileUpdate = (name, photoUrl) => {
-    return updateProfile(user, {
+    console.log({ name, photoUrl });
+    return updateProfile(auth.currentUser, {
       displayName: name,
       photoURL: photoUrl,
-    })
-      .then(() => {
-        //
-        "";
-      })
-      .catch((err) => {
-        toast.error(err.message);
-      });
+    });
   };
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {

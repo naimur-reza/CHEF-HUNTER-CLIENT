@@ -1,6 +1,7 @@
 import React, { useContext, useState } from "react";
 import { Link, Navigate } from "react-router-dom";
 import { FcGoogle } from "react-icons/fc";
+import { FaGithub } from "react-icons/fa";
 import { AuthContext } from "../providers/AuthProvider/AuthProvider";
 import { toast } from "react-hot-toast";
 const Register = () => {
@@ -8,13 +9,20 @@ const Register = () => {
   const [photoUrl, setPhotoUrl] = useState("");
   const [password, setPassword] = useState("");
   const [email, setEmail] = useState("");
-  const { user, signInGoogle, createUser } = useContext(AuthContext);
+  const { user, signInGoogle, createUser, profileUpdate } =
+    useContext(AuthContext);
   const handleRegister = (e) => {
     e.preventDefault();
     createUser(email, password)
       .then((res) => {
-        console.log(res.user);
-        toast.success("Registration successful");
+        profileUpdate(name, photoUrl)
+          .then(() => {
+            console.log(res.user);
+            toast.success("Registration successful");
+          })
+          .catch((err) => {
+            console.log(err);
+          });
       })
       .catch((err) => {
         toast.error(err.message);
@@ -33,8 +41,11 @@ const Register = () => {
             </label>
             <input
               type="text"
+              required
               placeholder="Enter Name"
               class="w-full input input-bordered"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
             />
           </div>
           <div>
@@ -43,8 +54,11 @@ const Register = () => {
             </label>
             <input
               type="text"
+              required
               placeholder="Photo Url"
               class="w-full input input-bordered"
+              value={photoUrl}
+              onChange={(e) => setPhotoUrl(e.target.value)}
             />
           </div>
           <div>
@@ -52,6 +66,7 @@ const Register = () => {
               <span class="text-base label-text">Email</span>
             </label>
             <input
+              required
               type="text"
               placeholder="Email Address"
               class="w-full input input-bordered"
@@ -64,6 +79,7 @@ const Register = () => {
               <span class="text-base label-text">Password</span>
             </label>
             <input
+              required
               type="password"
               placeholder="Enter Password"
               class="w-full input input-bordered"
@@ -89,14 +105,14 @@ const Register = () => {
           <div>
             <button
               onClick={signInGoogle}
-              class="btn btn-success btn-block inline-flex items-center gap-4"
+              class="btn btn-outline btn-block inline-flex items-center gap-4"
             >
               <FcGoogle width={30} height={30} /> Continue With Google
             </button>
           </div>
           <div>
-            <button class="btn btn-success btn-block">
-              Continue With Github
+            <button class="btn btn-outline btn-block inline-flex items-center gap-4">
+              <FaGithub /> Continue With Github
             </button>
           </div>
         </form>
