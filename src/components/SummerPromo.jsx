@@ -28,7 +28,7 @@ const SummerPromo = () => {
         </div>
       </div>
       <div className="flex justify-between items-center flex-col lg:flex-row-reverse py-10">
-        <LazyLoad height={300}>
+        <LazyLoad height={384}>
           <img className="lg:h-96 rounded-md" src={summer2} alt="" />
         </LazyLoad>
         <div className="space-y-3 py-5 max-w-lg p-5">

@@ -1,18 +1,43 @@
-.banner {
+.banner1 {
   background-size: cover;
-  /* background-image: linear-gradient(rgba(0, 0, 0, 0.61), rgba(0, 0, 0, 0.664)),
-    url("../../src/assets/images/banner1.jpg"); */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.671), rgba(0, 0, 0, 0.603)),
+    url("../../src/assets/images/banner1.jpg");
   background-repeat: no-repeat;
-  background-position: top;
-  background-size: cover;
+  /* background-position: top; */
+  /* background-size: cover; */
+  /* height: 100vh; */
+  height: 100vh;
+  object-fit: cover;
 }
 .recipe {
   background-size: cover;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.459), rgba(0, 0, 0, 0.452)),
+  background-image: linear-gradient(rgba(0, 0, 0, 0.514), rgba(0, 0, 0, 0.452)),
     url("../../src/assets/images/recipe.jpg");
   height: calc(100vh-0);
 
   background-repeat: no-repeat;
   background-position: bottom;
   background-size: cover;
+}
+
+.banner2 {
+  background-size: cover;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.384), rgba(0, 0, 0, 0.479)),
+    url("../../src/assets/images/banner2.jpg");
+  background-repeat: no-repeat;
+  /* background-position: top; */
+  /* background-size: cover; */
+  /* height: 100vh; */
+  height: 100vh;
+  object-fit: cover;
+}
+.banner4 {
+  background-size: cover;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.479), rgba(0, 0, 0, 0.568)),
+    url("../../src/assets/images/banner4.jpg");
+  background-repeat: no-repeat;
+  /* background-position: top; */
+  /* background-size: cover; */
+  /* height: 100vh; */
+  height: calc(100vh-64px);
 }

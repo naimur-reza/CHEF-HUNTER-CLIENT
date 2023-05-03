@@ -27,46 +27,48 @@ const Login = () => {
   return (
     <div class="relative p-5 flex flex-col justify-center h-screen overflow-hidden">
       <ScrollRestoration />
-      <div class="w-full p-6 m-auto bg-white rounded-md shadow-md   lg:max-w-lg">
-        <h1 class="text-3xl font-semibold text-center text-gray-700">
+      <div class="w-full p-6 m-auto bg-opacity-10 rounded-md shadow-md glass  lg:max-w-lg">
+        <h1 class="text-3xl font-semibold text-center text-gray-200">
           Please Login
         </h1>
         <form onSubmit={handleLogin} class="space-y-4">
           <div>
             <label class="label">
-              <span class="text-base label-text">Email</span>
+              <span class="text-white label-text">Email</span>
             </label>
             <input
               type="text"
               placeholder="Email Address"
-              class="w-full input input-bordered"
+              class="w-full input input-bordered bg-opacity-80 text-white"
             />
           </div>
           <div>
             <label class="label">
-              <span class="text-base label-text">Password</span>
+              <span class="text-white label-text">Password</span>
             </label>
             <input
               required
               type="password"
               placeholder="Enter Password"
-              class="w-full input input-bordered"
+              class="w-full input input-bordered bg-opacity-80 text-white"
             />
           </div>
           <a
             href="#"
-            class="text-xs text-gray-600 hover:underline hover:text-blue-600"
+            class="text-xs text-gray-200 hover:underline hover:text-blue-600"
           >
             Forget Password?
           </a>
-          <p className="text-xs text-gray-600  ">
+          <p className="text-xs text-gray-200  ">
             Don't have an account?{" "}
             <Link to={"../register"} className="hover:underline">
               Register
             </Link>
           </p>
           <div>
-            <button class="btn btn-success btn-block">Login</button>
+            <button class="btn btn-success btn-block bg-opacity-80 ">
+              Login
+            </button>
           </div>
           <div>
             <button

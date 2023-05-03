@@ -8,7 +8,7 @@ import LazyLoad from "react-lazyload";
 const Main = () => {
   return (
     <>
-      <div className="banner ">
+      <div className="banner2 ">
         <Header />
         <div className="min-h-[calc(100vh-284px)] ">
           <Outlet />

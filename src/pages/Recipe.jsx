@@ -1,5 +1,5 @@
 import { Rating } from "@smastrom/react-rating";
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { toast } from "react-hot-toast";
 import {
   FaHeart,
@@ -16,8 +16,13 @@ import {
 } from "react-router-dom";
 import Loader from "./Loader";
 import LazyLoad from "react-lazyload";
+import { AuthContext } from "../providers/AuthProvider/AuthProvider";
 
 const Recipe = () => {
+  const { user } = useContext(AuthContext);
+  if (!user) {
+    return <Navigate to="/login" />;
+  }
   const allData = useLoaderData();
   const navigate = useNavigation();
   if (navigate.state === "loading") {

@@ -2,14 +2,21 @@ import React, { useEffect, useState } from "react";
 import { FaHistory, FaPizzaSlice, FaThumbsUp } from "react-icons/fa";
 import LazyLoad from "react-lazyload";
 import { Link } from "react-router-dom";
+import Loader from "./Loader";
 
 const Chef = () => {
   const [chefs, setChefs] = useState([]);
+  const [loading, setLoading] = useState(false);
   useEffect(() => {
+    setLoading(true);
     fetch("https://cookdens-server-naimur-reza.vercel.app/chef")
       .then((res) => res.json())
       .then((data) => setChefs(data));
+    setLoading(false);
   }, []);
+  if (loading) {
+    return <Loader />;
+  }
   console.log(chefs);
   return (
     <div className="py-10 my-container gap-4">
@@ -22,7 +29,7 @@ const Chef = () => {
           return (
             <div className="card    glass">
               <figure className=" ">
-                <LazyLoad height={200} once>
+                <LazyLoad height={243} offset={100}>
                   <img className="w-full h-full" src={chef.image} />
                 </LazyLoad>
               </figure>
