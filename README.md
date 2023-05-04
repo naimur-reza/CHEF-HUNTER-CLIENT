@@ -1,5 +1,5 @@
 
-[![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=800&size=44&pause=1000&width=435&lines=CooksDens+;Find+Your+Favourite+Chef;Best+Recipe)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fire+Code&weight=800&size=37&pause=1000&color=F7E831&width=435&lines=CooksDens+;Find+Your+Chef;Best+Recipe)](https://git.io/typing-svg)
 
 
 <h3> Live Link : https://chef-master-pro.web.app </h3>
