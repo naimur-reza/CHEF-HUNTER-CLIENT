@@ -13,12 +13,17 @@
 - Avaliable login with Google and Github 
 - Available Profile and Blogs
 
+
+<h3>Framework Used</h3>
+
+- Daysi Ui
+
+
 <h3>Packages Used</h3>
 
 
 - Vite React
 - Tailwind Css
-- Daysi Ui
 - Lazy-Load
 - React-Ratings
 - Burger-menu
