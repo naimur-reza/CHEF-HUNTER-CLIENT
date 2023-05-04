@@ -38,9 +38,9 @@ const Profile = () => {
           </p>
           <p>
             <span className="inline-flex items-center gap-2  font-semibold tracking-wider text-gray-100">
-              <FaPhone /> Phone
-            </span>
-            : 01010101010
+              <FaPhone /> Phone:
+            </span>{" "}
+            +996 669-669
           </p>
           <div className="flex gap-4 pt-5">
             <a href="https://www.facebook.com/iamrezadadu">
