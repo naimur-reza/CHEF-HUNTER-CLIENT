@@ -59,7 +59,7 @@ const Header = () => {
           </div>
           {user ? (
             <div
-              data-tip={user?.email}
+              data-tip={user?.displayName}
               className="dropdown tooltip tooltip-left tooltip-warning "
             >
               {" "}

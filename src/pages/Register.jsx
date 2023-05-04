@@ -20,7 +20,7 @@ const Register = () => {
       .then((res) => {
         profileUpdate(name, photoUrl)
           .then(() => {
-            console.log(res.user);
+            window.location.reload();
             toast.success("Registration successful");
           })
           .catch((err) => {
