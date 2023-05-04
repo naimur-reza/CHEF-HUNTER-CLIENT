@@ -9,7 +9,7 @@ const Header = () => {
   const { user, logOut } = useContext(AuthContext);
   console.log(user);
   return (
-    <div className="bg-black bg-opacity-50 ">
+    <div className="bg-gradient-to-r from-gray-800 via-gray-900 to-black ">
       <div className="navbar  text-white my-container">
         <div className="navbar-start">
           <Link className="flex items-center " to={"/home/"}>
@@ -60,7 +60,7 @@ const Header = () => {
           {user ? (
             <div
               data-tip={user?.displayName}
-              className="dropdown tooltip tooltip-left tooltip-warning "
+              className="dropdown tooltip tooltip-right tooltip-warning "
             >
               {" "}
               <button className=" btn btn-circle avatar online mt-3 mr-4 lg:mr-0 lg:mt-0  btn-outline lg:ml-3">

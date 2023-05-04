@@ -81,7 +81,7 @@ const Recipe = () => {
           return (
             <div
               key={idx}
-              className="card lg:card-side lg:h-[440px] p-7 shadow-xl my-5  bg-white bg-opacity-10 backdrop-blur-md"
+              className="card lg:card-side lg:h-[440px] lg:p-7 p-3 shadow-xl my-5  bg-white bg-opacity-10 backdrop-blur-md"
             >
               <figure className="">
                 <LazyLoad height={200} offset={300}>
