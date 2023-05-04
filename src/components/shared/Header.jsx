@@ -9,7 +9,7 @@ const Header = () => {
   const { user, logOut } = useContext(AuthContext);
   console.log(user);
   return (
-    <div className="bg-black bg-transparent ">
+    <div className="bg-black bg-opacity-50 ">
       <div className="navbar  text-white my-container">
         <div className="navbar-start">
           <NavLink to={"/home/"}>
@@ -62,7 +62,7 @@ const Header = () => {
               className="dropdown tooltip tooltip-left tooltip-warning "
             >
               {" "}
-              <button className=" btn btn-circle avatar online   btn-outline lg:ml-3">
+              <button className=" btn btn-circle avatar online mt-3 mr-4 lg:mr-0 lg:mt-0  btn-outline lg:ml-3">
                 <img
                   className="rounded-full ring-4"
                   src={user?.photoURL}

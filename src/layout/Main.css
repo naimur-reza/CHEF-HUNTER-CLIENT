@@ -22,7 +22,7 @@
 
 .banner2 {
   background-size: cover;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.384), rgba(0, 0, 0, 0.479)),
+  background-image: linear-gradient(rgba(0, 0, 0, 0.466), rgba(0, 0, 0, 0.356)),
     url("../../src/assets/images/banner2.jpg");
   background-repeat: no-repeat;
   background-position: left;

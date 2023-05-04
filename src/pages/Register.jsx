@@ -108,7 +108,7 @@ const Register = () => {
           <div>
             <button
               onClick={signInGoogle}
-              class="btn btn-outline btn-block inline-flex items-center gap-4"
+              class="btn btn-outline btn-block inline-flex items-center gap-4 text-white"
             >
               <FcGoogle width={30} height={30} /> Continue With Google
             </button>

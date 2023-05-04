@@ -18,7 +18,6 @@ const Login = () => {
     logIn(email, password)
       .then((res) => {
         toast.success("login success");
-        Navigate("/home");
       })
       .catch((err) => {
         toast.error(err.message);
@@ -38,6 +37,8 @@ const Login = () => {
             </label>
             <input
               type="text"
+              name="email"
+              onChange={(e) => setEmail(e.target.value)}
               placeholder="Email Address"
               class="w-full input input-bordered  text-gray-700"
             />
@@ -48,6 +49,8 @@ const Login = () => {
             </label>
             <input
               required
+              name="password"
+              onChange={(e) => setPassword(e.target.value)}
               type="password"
               placeholder="Enter Password"
               class="w-full input input-bordered  text-gray-700"
