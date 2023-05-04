@@ -74,14 +74,14 @@ const Header = () => {
                 className="dropdown-content   menu p-2 shadow bg-black bg-opacity-70 rounded-box w-fit"
               >
                 <li>
-                  <NavLink className="text-white" to={"/profile"}>
+                  <NavLink className="text-white" to={"../home/profile"}>
                     Profile
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink className="text-white" onClick={logOut}>
+                  <button className="text-white" onClick={logOut}>
                     Logout
-                  </NavLink>
+                  </button>
                 </li>
               </ul>
             </div>

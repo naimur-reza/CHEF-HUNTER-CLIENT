@@ -18,7 +18,9 @@ const SummerPromo = () => {
             Over <span className="text-yellow-500">250</span> Delicious & Tasty
             Recipes
           </h1>
-          <p className="text-yellow-500 text-xl font-semibold">Get 25% Off</p>
+          <p className="text-yellow-500 text-xl font-semibold animate-pulse">
+            Get 25% Off
+          </p>
           <p className="text-gray-200 tracking-wide">
             The recipes in this cookbook are easy to follow, with clear
             instructions and ingredients that are readily available in most
@@ -39,7 +41,9 @@ const SummerPromo = () => {
             </span>{" "}
             Nutritious and Delicious Recipes Over{" "}
           </h1>
-          <p className="text-yellow-500 text-xl font-semibold">Get 49% Off</p>
+          <p className="text-yellow-500 text-xl font-semibold animate-pulse">
+            Get 49% Off
+          </p>
           <p className="text-gray-200 tracking-wide ">
             The appetizers section features a variety of dips, spreads, and
             finger foods that are perfect for entertaining or snacking. From

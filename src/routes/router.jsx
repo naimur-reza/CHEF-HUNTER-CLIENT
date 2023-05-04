@@ -12,6 +12,7 @@ import PrivateRoutes from "./PrivateRoutes";
 import Blog from "../pages/Blog";
 import News from "../pages/News";
 import Contact from "../pages/Contact";
+import Profile from "../pages/Profile";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -51,6 +52,10 @@ const router = createBrowserRouter([
       {
         path: "contact",
         element: <Contact />,
+      },
+      {
+        path: "profile",
+        element: <Profile />,
       },
     ],
   },
