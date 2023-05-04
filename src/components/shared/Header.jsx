@@ -9,7 +9,7 @@ const Header = () => {
   const { user, logOut } = useContext(AuthContext);
   console.log(user);
   return (
-    <div className="bg-gradient-to-r from-gray-800 via-gray-900 to-black ">
+    <div className="bg-black ">
       <div className="navbar  text-white my-container">
         <div className="navbar-start">
           <Link className="flex items-center " to={"/home/"}>
