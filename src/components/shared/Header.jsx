@@ -12,9 +12,10 @@ const Header = () => {
     <div className="bg-black bg-opacity-50 ">
       <div className="navbar  text-white my-container">
         <div className="navbar-start">
-          <NavLink to={"/home/"}>
+          <Link className="flex items-center " to={"/home/"}>
             <img className="w-[80px] h-[80px]" src={logo} alt="" />
-          </NavLink>
+            <h1 className="text-xl">CookDens</h1>
+          </Link>
         </div>
 
         <div
