@@ -9,7 +9,7 @@ const Header = () => {
   const { user, logOut } = useContext(AuthContext);
   console.log(user);
   return (
-    <div className="bg-black bg-opacity-30 ">
+    <div className="bg-black bg-transparent ">
       <div className="navbar  text-white my-container">
         <div className="navbar-start">
           <NavLink to={"/home/"}>

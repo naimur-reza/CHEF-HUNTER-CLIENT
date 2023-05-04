@@ -5,7 +5,7 @@ const Blog = () => {
   return (
     <div
       ref={ref}
-      className="my-container py-10 bg-white bg-opacity-20 backdrop-blur-sm p-5 my-5 "
+      className="my-container py-10 bg-white text-gray-100 bg-opacity-20 backdrop-blur-sm p-5 py-5 "
     >
       <h1 className="text-3xl text-gray-200 font-semibold">Latest Blogs</h1>
       <div className="space-y-5">

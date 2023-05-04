@@ -45,7 +45,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div className="bg-[conic-gradient(at_bottom_right,_var(--tw-gradient-stops))] from-slate-900 via-purple-900 to-slate-900">
+      <div className="bg-gradient-to-r from-gray-700 via-gray-800 to-gray-900">
         <Chef />
         <SummerPromo />
       </div>
