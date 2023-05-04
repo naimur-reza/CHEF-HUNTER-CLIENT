@@ -3,7 +3,7 @@ import { Link, NavLink } from "react-router-dom";
 import { FaUserAlt } from "react-icons/fa";
 import { AuthContext } from "../../providers/AuthProvider/AuthProvider";
 import { Fade as Hamburger } from "hamburger-react";
-
+import logo from "../../../src/assets/images/CooksDen.png";
 const Header = () => {
   const [isOpen, setOpen] = useState(false);
   const { user, logOut } = useContext(AuthContext);
@@ -12,8 +12,8 @@ const Header = () => {
     <div className="bg-black bg-opacity-30 ">
       <div className="navbar  text-white my-container">
         <div className="navbar-start">
-          <NavLink to={"/home/"} className="btn btn-ghost normal-case text-2xl">
-            CooksDen
+          <NavLink to={"/home/"}>
+            <img className="w-[80px] h-[80px]" src={logo} alt="" />
           </NavLink>
         </div>
 

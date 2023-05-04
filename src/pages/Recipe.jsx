@@ -84,7 +84,7 @@ const Recipe = () => {
               className="card lg:card-side lg:h-[400px] p-7 shadow-xl my-5  bg-white bg-opacity-10 backdrop-blur-md"
             >
               <figure className="">
-                <LazyLoad height={200}>
+                <LazyLoad height={200} offset={300}>
                   <img
                     className="lg:h-full mx-auto w-5/6 w  mask mask-hexagon"
                     src={rc?.image}
